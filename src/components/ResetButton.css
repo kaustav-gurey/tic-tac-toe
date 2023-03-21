@@ -1,0 +1,9 @@
+.reset-button{
+    padding: 10px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    color: #efefef;
+    background-color: #c42712fd;
+}
