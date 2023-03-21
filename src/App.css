@@ -6,6 +6,7 @@ body{
   margin: 0;
   display: flex;
   justify-content: center;
+  background-color: #23252c;
   /* align-items: center;
   height: 100vh; */
 }
@@ -21,4 +22,7 @@ main{
   grid-template-columns: 6rem 6rem 6rem;
   grid-template-rows: 6rem 6rem 6rem;
   padding: 40px;
+}
+.game-info{
+  color: #efefef;
 }
