@@ -36,6 +36,10 @@ export default function App(){
   React.useEffect(() => {
     //* current sign changes everytime the a box is clicked i.e. when the values array is modified
     setCurrentSign(oldSign =>  oldSign === 'X' ? 'O' : 'X' )
+    if(!gameEnd && values.every(element => element)){
+      setGameEnd(true)
+      setGameInfo('Game draw, nobody wins.')
+    }
     const winnerLogic = [
       [0, 1, 2],
       [3, 4, 5],
@@ -50,12 +54,8 @@ export default function App(){
       const[a, b, c] = logic
       if(values[a] && values[a] === values[b] && values[a] === values[c]){
         setGameEnd(true)
-        setGameInfo(`Player ${values[a]} wins!!`)
+        setGameInfo(`Player ${values[a]} wins !!! 🎉`)
       }
-    }
-    if(!gameEnd && values.every(element => element)){
-      setGameEnd(true)
-      setGameInfo('Game draw, nobody wins.')
     }
   },[values])
   function resetGame(){
